@@ -1,0 +1,47 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #003566 !important;
+}
+.SignUp{
+    background-color: #FFC300;
+    color: #000814;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-right: 70px;
+}
+.SignUp:hover{
+    color: #CCCCCC;
+}
+.SignUp:visited{
+    color: #000814;
+}
+
+nav img{
+    padding-left: 95px;
+    padding-right: 75px;
+    
+}
+
+.NavLink{
+    margin-right: 33px;
+    text-decoration: none;
+    
+    
+}
+.NavLink:visited{
+    color: #CCCCCC;
+}
+.NavLink{
+    color: #CCCCCC;
+}
+.NavLink:hover{
+    color: #FFC300;
+}
+img{
+    float: right;
+}
