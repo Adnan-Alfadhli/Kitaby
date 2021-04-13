@@ -4,7 +4,12 @@
 {% block content %}
 
 
-<h1>HHH</h1>
+<a href="addUsedBook">sell book</a>
 
-
+{% for book in usedBook%}
+    <div><img src="{{book.Book_Image.url}}" width="100px" height="100px">
+    <h6>{{book.Book_Title}}</h6>
+    <p>{{book.Book_Price}}</p>
+</div>
+{% endfor %}
 {% endblock %}

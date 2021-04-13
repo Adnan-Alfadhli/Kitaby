@@ -5,29 +5,28 @@
 
 
 <div class="addUsedBook">
-    <h2>Contact Us</h2>
+    <img src="{% static 'images/Undraw/addusedbookform1.jpg' %}" class="sellBookImg">
     <form action="addUsedBook" method="POST" class="sellBookForm">
         {% csrf_token %}
         <div class="UsedBookDivInputs">
             <div class="inputLine">
                 <div class="input">
-                    <label>Contact Number :</label>
+                    <input type="file" name="Book_Image">
+                    <label>upload image</label>
+                </div>
+            </div>
+            <div class="inputLine">
+                <div class="input">
+                    <label>Book Title</label>
                     <input type="text" class="input" name="Book_Title">
                 </div>
             </div>
             <div class="inputLine">
                 <div class="input">
-                    <label>Email :</label>
+                    <label>Book Price</label>
                     <input type="number" class="input" name="Book_Price">
                 </div>
             </div>
-            <div class="inputLine">
-                <div class="input">
-                    <label>Message :</label>
-                    <input type="number" class="input" name="Book_Price">
-                </div>
-            </div>
-            
             <div class="inputLine">
                 <div class="input">
                     <input type="submit">

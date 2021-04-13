@@ -3,13 +3,14 @@
 {% static "images" as baseUrl %}
 {% block content %}
 
-
-<h1>Find Your Book Easy</h1>
-<p>With Kitaby platform you can search of any books that 
-    your instractour requiremant</p>
-<form>
-
-</form>
-<img src="{% static 'images/Undraw/HomeBook.svg'%}">
+<div class="HomeLeft">
+    <h1 class="Title">Find Your Book Easy</h1>
+    <p class="dis">With Kitaby platform you can search of any books that 
+        your instractour requiremant</p>
+    <form class="SearchForm">
+        <input type="text" placeholder="Find Your Book here" class="SearchInput"><input type="submit" value="Search Book" class="SearchBut">
+    </form>
+</div>
+<img src="{% static 'images/Undraw/HomeBook.svg'%}" class="HomeImg">
 
 {% endblock %}

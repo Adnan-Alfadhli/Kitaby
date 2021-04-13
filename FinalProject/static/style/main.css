@@ -5,6 +5,7 @@
 }
 body{
     background-color: #003566 !important;
+    
 }
 .SignUp{
     background-color: #FFC300;
@@ -12,7 +13,21 @@ body{
     padding: 10px 30px;
     border-radius: 10px;
     text-decoration: none;
-    margin-right: 70px;
+    margin-right: 40px;
+    
+}
+.SideSignup{
+    background-color: #FFD60A;
+    height: 100vh;
+    width: 40vw;
+    float: left;
+}
+.SideSignup .SidePhoto img{
+    width: 545px;
+    height: 640px;
+}
+.SidePhoto {
+    padding-left: 100px;
 }
 .SignUp:hover{
     color: #CCCCCC;
@@ -20,18 +35,57 @@ body{
 .SignUp:visited{
     color: #000814;
 }
-
+.SignUpForm{
+    
+}
+.SubmitInput{
+    background-color: #FFD60A;
+    width: 550px;
+    height: 45px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-family: 'Kiwi Maru', serif;
+}
+.SignUpFormDiv{
+    color: #FFC300;
+    margin-left: 50vw;
+    padding-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+.inputLine{
+    display: flex;
+    padding-top: 20px;
+}
+.input input{
+    margin-top: 10px;
+    width: 215px;
+}
+.inputLine input{
+    display: block;
+    border-radius: 10px;
+    background-color: #F2F2F2;
+    border-style: none;
+}
+.LongInput input{
+    width: 550px;
+    height: 30px;
+}
+.Linput{
+    padding-left: 120px;
+}
 nav img{
     padding-left: 95px;
     padding-right: 75px;
     
 }
-
+nav{
+    margin-top: 5px;
+    font-family: 'Kiwi Maru', serif;
+    margin-right: 50px;
+}
 .NavLink{
     margin-right: 33px;
     text-decoration: none;
-    
-    
 }
 .NavLink:visited{
     color: #CCCCCC;
@@ -45,3 +99,91 @@ nav img{
 img{
     float: right;
 }
+.logo{
+    height: 95px;
+    width: 300px;
+    padding-left: 50px;
+    padding-top: 30px;
+    float: left;
+}
+.Title{
+    color: #FFC300;
+    padding-bottom: 40px;
+    font-size: 64px;
+    font-family: 'Poppins', sans-serif;
+}
+.dis{
+    color: #CCCCCC;
+    padding-bottom: 130px;
+    font-size: 18px;
+    width: 450px;
+    font-family: 'Poppins', sans-serif;
+}
+.SearchBut{
+    background-color: #FFC300;
+    color: #3F3D56;
+    width: 200px;
+    height: 60px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+.SearchInput{
+    width: 395px;
+    height: 60px;
+    background-color: #F2F2F2;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-left: 15px;
+    
+}
+.SearchForm{
+    padding: 0;
+    margin: 0;
+    font-family: 'Kiwi Maru', serif;
+}
+.HomeImg{
+    width: 565px;
+    height: 410px;
+    margin-right: 100px;
+    margin-top: 120px;
+}
+.HomeLeft{
+    float: left;
+    padding: 120px 0px 0px 100px;
+    
+}
+.UserGret{
+    color: #FFC300;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+.addUsedBook{
+    background-color: #2F2E41;
+    color: #FFD60A;
+    width: 1230px;
+    height: 85vh;
+    margin-left: auto;
+    margin-right: 100px;
+    border-radius: 10px;
+}
+.sellBookImg{
+    float: left;
+    height: 595px;
+    width: 644px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.sellBookForm{
+    display: flex;
+    
+    
+}
+.UsedBookDivInputs{
+   display: block;
+   
+}
+.UsedBookDivInputs .inputLine{
+    margin-left: 140px;
+}
+

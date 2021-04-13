@@ -2,9 +2,10 @@
 {% load static %}
 {% static "images" as baseUrl %}
 {% block content %}
-
-
-<h1>HHH</h1>
-
+<h1>Buy book</h1>
+{% for book in object_list%}
+    <a href="{{ book.get_absolute_url }}">{{book}}</a>
+    
+{% endfor %}
 
 {% endblock %}
