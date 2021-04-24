@@ -176,6 +176,8 @@ img{
 }
 .sellBookForm{
     display: flex;
+    padding-top: 80px;
+    padding-left: 50px;
     
     
 }
@@ -187,3 +189,177 @@ img{
     margin-left: 140px;
 }
 
+.Top{
+    display: block;
+    margin-top: 15px;
+}
+.Top h2{
+    width: 445px;
+    float: left;
+    color: #FFD60A;
+    margin-left: 105px;
+}
+.Top a{
+    float: right;
+    background-color: #FFC300;
+    width: 180px;
+    text-align: center;
+    border-radius: 10px;
+    height: 35px;
+    color: #003566;
+    text-decoration: none;
+    padding-top: 5px;
+    margin-right: 85px;
+    
+}
+.BroSell{
+    clear: both;
+    margin-left: 105px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 85px;
+    
+
+}
+.BroSell a{
+    
+}
+.BuyUsedBtn{
+    background-color: #FFC300;
+    width: 40%;
+    text-align: center;
+    border-radius: 10px;
+    height: 35px;
+    margin-left: 290px;
+    margin-top: 140px;
+    padding-top: 5px;
+}
+.BuyUsedBtn a{
+    color: #003566;
+    text-decoration: none;
+}
+.cardSellBook{
+    background-color: #2F2E41;
+    width: 600px;
+    height: 335px;
+    color: #FFC300;
+    margin-top: 20px;
+    
+}
+.cardSellBook img{
+    float: left;
+    height: 100%;
+    width: 220px;
+    
+}
+.inf{
+    margin-left: 260px;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+.sellinput{
+    background-color: #FFD60A !important;
+    color: #003566;
+}
+  
+[type="file"] {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    white-space: nowrap;
+    width: 1px;
+  }
+  
+  [type="file"] + label {
+    /* File upload button styles */
+    background: url("/static/images/upload1.svg") no-repeat ;
+    /*background-color: #000;*/
+    /*border-radius: 4rem;*/
+    color: #FFD60A;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 8rem;
+    line-height: 4rem;
+    padding-top: 6rem;
+    padding-right: 2rem;
+    transition: background-color 0.3s;
+    margin-left: 3rem;
+  }
+  
+  [type="file"]:focus + label,
+  [type="file"] + label:hover {
+    /* File upload hover state button styles */
+    
+  }
+  
+  [type="file"]:focus + label {
+    /* File upload focus state button styles */
+    outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+  }
+  .ContactForm{
+    background-color: #2F2E41;
+    width: 395px;
+    height: 500px;
+    float: right;
+    color: #CCCCCC;
+    margin-right: 85px;
+    border-radius: 30px;
+    margin-left: 0;
+    padding-top: 50px;
+    box-shadow: 0 8px 6px -6px black;
+  }
+  .ContactForm div{
+      
+  }
+  .ContactForm h3{
+      text-align: center;
+  }
+  .ContactImg{
+      float: left;
+      width: 601px;
+      height: 492px;
+      margin-left: 110px;
+  }
+  .Contact{
+      margin-top: 50px;
+  }
+  .ContactFormDiv{
+    padding-left: 0px !important;
+  }
+  .inputLineC{
+    display: flex;
+    padding-top: 20px;
+    padding-left: 50px;
+  }
+ 
+.inputLineC input{
+    display: block;
+    border-style: none;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-bottom: 1px solid #000000;
+    background-color: #2F2E41;
+    margin-top: 0px;
+    width: 300px;
+}
+.Btn{
+    padding-left: 200px;
+    padding-right: 0;
+    
+}
+.Btn input{
+    background-color: #FFC300;
+    width: 100px;
+    border-radius: 10px;
+    height: 40px;
+    font-family: 'Kiwi Maru', serif;
+    
+}

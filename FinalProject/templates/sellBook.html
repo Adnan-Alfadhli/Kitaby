@@ -1,15 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
 {% static "images" as baseUrl %}
+{% block title %}Used Book{% endblock %}
 {% block content %}
 
-
-<a href="addUsedBook">sell book</a>
-
-{% for book in usedBook%}
-    <div><img src="{{book.Book_Image.url}}" width="100px" height="100px">
-    <h6>{{book.Book_Title}}</h6>
-    <p>{{book.Book_Price}}</p>
+<div class="Top">
+    <h2>Sell Your Book Now !</h2>
+    <a href="addUsedBook">sell book</a>
 </div>
-{% endfor %}
+
+
+
+    <div class="BroSell">
+        {% for book in usedBook%}
+        <div class="cardSellBook">
+            <img src="{{book.Book_Image.url}}" width="100px" height="100px">
+            <div class="inf">
+                <h4><span style="color: #CCCCCC;">Book Name:</span> {{book.Book_Title}}</h4>
+                <p><span style="color: #CCCCCC;">Book Price:</span> {{book.Book_Price}} KWD</p>
+                <p><span style="color: #CCCCCC;">Sell By :</span> {{book.user.FName}}</p>
+            </div>
+            <div class="BuyUsedBtn">
+            <a href="/Details">Buy Book</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
 {% endblock %}

@@ -158,14 +158,18 @@ class Book(models.Model):
         })
 
 class UsedBook(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
     BookID = models.AutoField(primary_key=True)
     Book_Image = models.ImageField(null=True , blank=True)
     Book_Title=models.CharField(max_length=60)
     Book_Price=models.IntegerField()
     
+    
     def __str__(self):
         return self.Book_Title
 
+
+    
 class Category(models.Model):
     CategoryID=models.IntegerField(primary_key=True, unique=True )
     CategoryName=models.CharField(max_length=60)

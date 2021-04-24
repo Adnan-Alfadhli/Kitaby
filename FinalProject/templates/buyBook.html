@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% static "images" as baseUrl %}
+{% block title %}Buy Book{% endblock %}
 {% block content %}
 <h1>Buy book</h1>
 {% for book in object_list%}

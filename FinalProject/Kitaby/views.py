@@ -8,6 +8,8 @@ from .models import Book, UsedBook, OrderBook, Order
 from django.contrib.auth import password_validation
 from django.views.generic import ListView, DetailView
 from django.utils import timezone
+from .forms import addUsedBookForm
+from django.core.files.storage import FileSystemStorage
 User = get_user_model()
 
 # Create your views here.
@@ -81,14 +83,28 @@ def SellBook(request):
 
 
 def addUsedBook(request):
-    if request.method == 'POST':
-        Book_Image = request.POST['Book_Image']
-        Book_Title = request.POST['Book_Title']
-        Book_Price = request.POST['Book_Price']
-
-        return redirect('SellBook')
+    user = request.user
+    if user is not None and user.is_active:
+        form= addUsedBookForm(request.POST or None, request.FILES or None)
+        if form.is_valid():
+            Book_Image= request.FILES['Book_Image']
+            fs= FileSystemStorage()
+            fs.save(Book_Image.name, Book_Image)
+            instance = form.save(commit=False)
+            instance.user = request.user
+            instance.save()
+            return redirect('/SellBook')
+        context= {'form': form }
+        return render(request, 'sellusedBook.html', context)
     else:
-        return render(request, 'sellusedBook.html')
+        return redirect('/login')
+    
+    
+    #if request.method == 'POST':
+        
+        #return redirect('/SellBook')
+    #else:
+    
 
 def logout(request):
     auth.logout(request)

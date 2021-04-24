@@ -1,40 +1,50 @@
 {% extends 'base.html' %}
 {% load static %}
 {% static "images" as baseUrl %}
+{% block title %}Contact{% endblock %}
 {% block content %}
 
 
-<div class="addUsedBook">
-    <h2>Contact Us</h2>
-    <form action="addUsedBook" method="POST" class="sellBookForm">
-        {% csrf_token %}
-        <div class="UsedBookDivInputs">
-            <div class="inputLine">
-                <div class="input">
-                    <label>Contact Number :</label>
-                    <input type="text" class="input" name="Book_Title">
+<div class="Contact">
+    <img src="{% static 'images/Undraw/Contact.svg'%}" class="ContactImg">
+    <div class="ContactFormDiv">
+        <form action="contact" method="POST" class="ContactForm">
+            {% csrf_token %}
+            <h3>Contact Us</h3>
+            <div class="UsedBookDivInputs con">
+                <div class="inputLineC">
+                    <div class="input">
+                        <label>Name:</label>
+                        <input type="text" class="input" name="Book_Title">
+                    </div>
+                </div>
+                <div class="inputLineC">
+                    <div class="input">
+                        <label>Email :</label>
+                        <input type="email" class="input" name="Book_Price">
+                    </div>
+                </div>
+                <div class="inputLineC">
+                    <div class="input">
+                        <label>Phone number :</label>
+                        <input type="number" class="input" name="Book_Price">
+                    </div>
+                </div>
+                <div class="inputLineC">
+                    <div class="input">
+                        <label>Message :</label>
+                        <input type="text" class="input" name="Book_Price">
+                    </div>
+                </div>
+                
+                <div class="inputLineC">
+                    <div class="input Btn">
+                        <input type="submit" value="Send">
+                    </div>
                 </div>
             </div>
-            <div class="inputLine">
-                <div class="input">
-                    <label>Email :</label>
-                    <input type="number" class="input" name="Book_Price">
-                </div>
-            </div>
-            <div class="inputLine">
-                <div class="input">
-                    <label>Message :</label>
-                    <input type="number" class="input" name="Book_Price">
-                </div>
-            </div>
-            
-            <div class="inputLine">
-                <div class="input">
-                    <input type="submit">
-                </div>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 
 

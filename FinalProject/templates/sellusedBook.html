@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 {% static "images" as baseUrl %}
+{% block title %}Sell used book{% endblock %}
 {% block content %}
 
 
 <div class="addUsedBook">
     <img src="{% static 'images/Undraw/addusedbookform1.jpg' %}" class="sellBookImg">
-    <form action="addUsedBook" method="POST" class="sellBookForm">
+    <form action="addUsedBook" method="POST" class="sellBookForm" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="UsedBookDivInputs">
             <div class="inputLine">
                 <div class="input">
-                    <input type="file" name="Book_Image">
-                    <label>upload image</label>
+                    <input type="file" id="file" name="Book_Image">
+                    <label for="file">Upload image</label>
                 </div>
             </div>
             <div class="inputLine">
@@ -29,7 +30,7 @@
             </div>
             <div class="inputLine">
                 <div class="input">
-                    <input type="submit">
+                    <input type="submit" value="Sell The Book" class="SubmitInput sellinput">
                 </div>
             </div>
         </div>
