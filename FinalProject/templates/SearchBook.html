@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% load static %} {% static "images" as baseUrl %} {%
+{% block title %}Search Book{% endblock %} {% block content %} {% if book %}
+<h1 class="buy-title">Result for Search</h1>
+<br />
+
+<a href=""></a>
+<div class="row">
+  {% for i in book %}
+  <div class="theBook">
+    <a href="../Details/{{i.slug}}/">
+      <div class="buy-image">
+        <img src="{{i.Book_Image.url}}" />
+      </div>
+      <div class="buy-text">
+        <span>{{i.Title}}</span>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% else %}
+<h1 class="buy-title">Nothing found</h1>
+{% endif %} {% endblock %}

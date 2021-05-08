@@ -138,3 +138,10 @@ STATIC_ROOT = os.path.join(BASE_DIR , 'staticFiles')
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
+
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = 'kitabyplatform@gmail.com'
+EMAIL_HOST_PASSWORD = 'bapSex-bypkin-0jumty'
+EMAIL_USE_TLS = True

@@ -10,6 +10,7 @@ from django.views.generic import ListView, DetailView
 from django.utils import timezone
 from .forms import addUsedBookForm
 from django.core.files.storage import FileSystemStorage
+from django.core.mail import send_mail
 User = get_user_model()
 
 # Create your views here.
@@ -58,9 +59,10 @@ def Registeration(request):
     else:
         return render(request, 'Registeration.html')
 
-def Borrowing(request):
-
-    return render(request, 'Borrowing.html')
+class Borrowing(ListView):
+    model = Book
+    template_name = "Borrowing.html"
+    
 
 class BuyBookView(ListView):
     model = Book
@@ -71,8 +73,22 @@ class BookDetails(DetailView):
     template_name = "BookDetails.html"
 
 def Contact(request):
+    if request.method == "POST":
+        Msg_name = request.POST['Msg-name']
+        Msg_email = request.POST['Msg-email']
+        Msg_number = request.POST['Msg-number']
+        Msg_message = request.POST['Msg-message']
 
-    return render(request, 'Contact.html')
+        send_mail(
+            'contact from ' + Msg_name,
+            'email from ' + Msg_email + " " +
+            Msg_message,
+            Msg_email,
+            ['adnan@bowxgames.com'],
+        )
+        return render(request, 'Contact.html' , {'Msg_name': Msg_name})
+    else:
+        return render(request, 'Contact.html')
 
 def SellBook(request):
     context = {
@@ -163,3 +179,8 @@ def remove_from_cart(request, slug):
         return redirect("Kitaby:Details", slug=slug)
     return redirect("Kitaby:Details", slug=slug)
 
+def SearchBook(request):
+    if request.method == "GET":
+        SearchBook= request.GET.get('SearchBook')
+        book = Book.objects.all().filter(Title=SearchBook)
+        return render(request, 'SearchBook.html', {'book': book})

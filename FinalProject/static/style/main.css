@@ -1,365 +1,444 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: #003566 !important;
-    
+body {
+  background-color: #003566 !important;
 }
-.SignUp{
-    background-color: #FFC300;
-    color: #000814;
-    padding: 10px 30px;
-    border-radius: 10px;
-    text-decoration: none;
-    margin-right: 40px;
-    
+.SignUp {
+  background-color: #ffc300;
+  color: #000814;
+  padding: 10px 30px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-right: 40px;
 }
-.SideSignup{
-    background-color: #FFD60A;
-    height: 100vh;
-    width: 40vw;
-    float: left;
+.SideSignup {
+  background-color: #ffd60a;
+  height: 100vh;
+  width: 40vw;
+  float: left;
 }
-.SideSignup .SidePhoto img{
-    width: 545px;
-    height: 640px;
+.SideSignup .SidePhoto img {
+  width: 545px;
+  height: 640px;
 }
 .SidePhoto {
-    padding-left: 100px;
+  padding-left: 100px;
 }
-.SignUp:hover{
-    color: #CCCCCC;
+.SignUp:hover {
+  color: #cccccc;
 }
-.SignUp:visited{
-    color: #000814;
+.SignUp:visited {
+  color: #000814;
 }
-.SignUpForm{
-    
+.SignUpForm {
 }
-.SubmitInput{
-    background-color: #FFD60A;
-    width: 550px;
-    height: 45px;
-    border-radius: 10px;
-    margin-top: 20px;
-    font-family: 'Kiwi Maru', serif;
+.SubmitInput {
+  background-color: #ffd60a;
+  width: 550px;
+  height: 45px;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-family: "Kiwi Maru", serif;
 }
-.SignUpFormDiv{
-    color: #FFC300;
-    margin-left: 50vw;
-    padding-top: 50px;
-    font-family: 'Poppins', sans-serif;
+.SignUpFormDiv {
+  color: #ffc300;
+  margin-left: 50vw;
+  padding-top: 50px;
+  font-family: "Poppins", sans-serif;
 }
-.inputLine{
-    display: flex;
-    padding-top: 20px;
+.inputLine {
+  display: flex;
+  padding-top: 20px;
 }
-.input input{
-    margin-top: 10px;
-    width: 215px;
+.input input {
+  margin-top: 10px;
+  width: 215px;
 }
-.inputLine input{
-    display: block;
-    border-radius: 10px;
-    background-color: #F2F2F2;
-    border-style: none;
+.inputLine input {
+  display: block;
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  border-style: none;
 }
-.LongInput input{
-    width: 550px;
-    height: 30px;
+.LongInput input {
+  width: 550px;
+  height: 30px;
 }
-.Linput{
-    padding-left: 120px;
+.Linput {
+  padding-left: 120px;
 }
-nav img{
-    padding-left: 95px;
-    padding-right: 75px;
-    
+nav img {
+  padding-left: 95px;
+  padding-right: 75px;
 }
-nav{
-    margin-top: 5px;
-    font-family: 'Kiwi Maru', serif;
-    margin-right: 50px;
+nav {
+  margin-top: 5px;
+  font-family: "Kiwi Maru", serif;
+  margin-right: 50px;
 }
-.NavLink{
-    margin-right: 33px;
-    text-decoration: none;
+.NavLink {
+  margin-right: 33px;
+  text-decoration: none;
 }
-.NavLink:visited{
-    color: #CCCCCC;
+.NavLink:visited {
+  color: #cccccc;
 }
-.NavLink{
-    color: #CCCCCC;
+.NavLink {
+  color: #cccccc;
 }
-.NavLink:hover{
-    color: #FFC300;
-}
-img{
-    float: right;
-}
-.logo{
-    height: 95px;
-    width: 300px;
-    padding-left: 50px;
-    padding-top: 30px;
-    float: left;
-}
-.Title{
-    color: #FFC300;
-    padding-bottom: 40px;
-    font-size: 64px;
-    font-family: 'Poppins', sans-serif;
-}
-.dis{
-    color: #CCCCCC;
-    padding-bottom: 130px;
-    font-size: 18px;
-    width: 450px;
-    font-family: 'Poppins', sans-serif;
-}
-.SearchBut{
-    background-color: #FFC300;
-    color: #3F3D56;
-    width: 200px;
-    height: 60px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-    
-}
-.SearchInput{
-    width: 395px;
-    height: 60px;
-    background-color: #F2F2F2;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-    padding-left: 15px;
-    
-}
-.SearchForm{
-    padding: 0;
-    margin: 0;
-    font-family: 'Kiwi Maru', serif;
-}
-.HomeImg{
-    width: 565px;
-    height: 410px;
-    margin-right: 100px;
-    margin-top: 120px;
-}
-.HomeLeft{
-    float: left;
-    padding: 120px 0px 0px 100px;
-    
-}
-.UserGret{
-    color: #FFC300;
-    padding-top: 15px;
-    padding-right: 15px;
-}
-.addUsedBook{
-    background-color: #2F2E41;
-    color: #FFD60A;
-    width: 1230px;
-    height: 85vh;
-    margin-left: auto;
-    margin-right: 100px;
-    border-radius: 10px;
-}
-.sellBookImg{
-    float: left;
-    height: 595px;
-    width: 644px;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-}
-.sellBookForm{
-    display: flex;
-    padding-top: 80px;
-    padding-left: 50px;
-    
-    
-}
-.UsedBookDivInputs{
-   display: block;
-   
-}
-.UsedBookDivInputs .inputLine{
-    margin-left: 140px;
+.NavLink:hover {
+  color: #ffc300;
 }
 
-.Top{
-    display: block;
-    margin-top: 15px;
+.logo {
+  height: 95px;
+  width: 300px;
+  padding-left: 50px;
+  padding-top: 30px;
+  float: left;
 }
-.Top h2{
-    width: 445px;
-    float: left;
-    color: #FFD60A;
-    margin-left: 105px;
+.Title {
+  color: #ffc300;
+  padding-bottom: 40px;
+  font-size: 64px;
+  font-family: "Poppins", sans-serif;
 }
-.Top a{
-    float: right;
-    background-color: #FFC300;
-    width: 180px;
-    text-align: center;
-    border-radius: 10px;
-    height: 35px;
-    color: #003566;
-    text-decoration: none;
-    padding-top: 5px;
-    margin-right: 85px;
-    
+.dis {
+  color: #cccccc;
+  padding-bottom: 130px;
+  font-size: 18px;
+  width: 450px;
+  font-family: "Poppins", sans-serif;
 }
-.BroSell{
-    clear: both;
-    margin-left: 105px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-right: 85px;
-    
+.SearchBut {
+  background-color: #ffc300;
+  color: #3f3d56;
+  width: 200px;
+  height: 60px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.SearchInput {
+  width: 395px;
+  height: 60px;
+  background-color: #f2f2f2;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  padding-left: 15px;
+}
+.SearchForm {
+  padding: 0;
+  margin: 0;
+  font-family: "Kiwi Maru", serif;
+}
+.HomeImg {
+  width: 565px;
+  height: 410px;
+  margin-right: 100px;
+  margin-top: 120px;
+  float: right;
+}
+.HomeLeft {
+  float: left;
+  padding: 120px 0px 0px 100px;
+}
+.UserGret {
+  color: #ffc300;
+  padding-top: 15px;
+  padding-right: 15px;
+}
+.addUsedBook {
+  background-color: #2f2e41;
+  color: #ffd60a;
+  width: 1230px;
+  height: 85vh;
+  margin-left: auto;
+  margin-right: 100px;
+  border-radius: 10px;
+}
+.sellBookImg {
+  float: left;
+  height: 595px;
+  width: 644px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.sellBookForm {
+  display: flex;
+  padding-top: 80px;
+  padding-left: 50px;
+}
+.UsedBookDivInputs {
+  display: block;
+}
+.UsedBookDivInputs .inputLine {
+  margin-left: 140px;
+}
 
+.Top {
+  display: block;
+  margin-top: 15px;
 }
-.BroSell a{
-    
+.Top h2 {
+  width: 445px;
+  float: left;
+  color: #ffd60a;
+  margin-left: 105px;
 }
-.BuyUsedBtn{
-    background-color: #FFC300;
-    width: 40%;
-    text-align: center;
-    border-radius: 10px;
-    height: 35px;
-    margin-left: 290px;
-    margin-top: 140px;
-    padding-top: 5px;
+.Top a {
+  float: right;
+  background-color: #ffc300;
+  width: 180px;
+  text-align: center;
+  border-radius: 10px;
+  height: 35px;
+  color: #003566;
+  text-decoration: none;
+  padding-top: 5px;
+  margin-right: 85px;
 }
-.BuyUsedBtn a{
-    color: #003566;
-    text-decoration: none;
+.BroSell {
+  clear: both;
+  margin-left: 105px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: 85px;
 }
-.cardSellBook{
-    background-color: #2F2E41;
-    width: 600px;
-    height: 335px;
-    color: #FFC300;
-    margin-top: 20px;
-    
+.BroSell a {
 }
-.cardSellBook img{
-    float: left;
-    height: 100%;
-    width: 220px;
-    
+.BuyUsedBtn {
+  background-color: #ffc300;
+  width: 40%;
+  text-align: center;
+  border-radius: 10px;
+  height: 35px;
+  margin-left: 290px;
+  margin-top: 140px;
+  padding-top: 5px;
 }
-.inf{
-    margin-left: 260px;
-    margin-top: 30px;
-    padding-top: 10px;
+.BuyUsedBtn a {
+  color: #003566;
+  text-decoration: none;
 }
-.sellinput{
-    background-color: #FFD60A !important;
-    color: #003566;
+.cardSellBook {
+  background-color: #2f2e41;
+  width: 600px;
+  height: 335px;
+  color: #ffc300;
+  margin-top: 20px;
 }
-  
+.cardSellBook img {
+  float: left;
+  height: 100%;
+  width: 220px;
+}
+.inf {
+  margin-left: 260px;
+  margin-top: 30px;
+  padding-top: 10px;
+}
+.sellinput {
+  background-color: #ffd60a !important;
+  color: #003566;
+}
+
 [type="file"] {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute !important;
-    white-space: nowrap;
-    width: 1px;
-  }
-  
-  [type="file"] + label {
-    /* File upload button styles */
-    background: url("/static/images/upload1.svg") no-repeat ;
-    /*background-color: #000;*/
-    /*border-radius: 4rem;*/
-    color: #FFD60A;
-    cursor: pointer;
-    display: inline-block;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    height: 8rem;
-    line-height: 4rem;
-    padding-top: 6rem;
-    padding-right: 2rem;
-    transition: background-color 0.3s;
-    margin-left: 3rem;
-  }
-  
-  [type="file"]:focus + label,
-  [type="file"] + label:hover {
-    /* File upload hover state button styles */
-    
-  }
-  
-  [type="file"]:focus + label {
-    /* File upload focus state button styles */
-    outline: 1px dotted #000;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}
+
+[type="file"] + label {
+  /* File upload button styles */
+  background: url("/static/images/upload1.svg") no-repeat;
+  /*background-color: #000;*/
+  /*border-radius: 4rem;*/
+  color: #ffd60a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 8rem;
+  line-height: 4rem;
+  padding-top: 6rem;
+  padding-right: 2rem;
+  transition: background-color 0.3s;
+  margin-left: 3rem;
+}
+
+[type="file"]:focus + label,
+[type="file"] + label:hover {
+  /* File upload hover state button styles */
+}
+
+[type="file"]:focus + label {
+  /* File upload focus state button styles */
+  outline: 1px dotted #000;
   outline: -webkit-focus-ring-color auto 5px;
-  }
-  .ContactForm{
-    background-color: #2F2E41;
-    width: 395px;
-    height: 500px;
-    float: right;
-    color: #CCCCCC;
-    margin-right: 85px;
-    border-radius: 30px;
-    margin-left: 0;
-    padding-top: 50px;
-    box-shadow: 0 8px 6px -6px black;
-  }
-  .ContactForm div{
-      
-  }
-  .ContactForm h3{
-      text-align: center;
-  }
-  .ContactImg{
-      float: left;
-      width: 601px;
-      height: 492px;
-      margin-left: 110px;
-  }
-  .Contact{
-      margin-top: 50px;
-  }
-  .ContactFormDiv{
-    padding-left: 0px !important;
-  }
-  .inputLineC{
-    display: flex;
-    padding-top: 20px;
-    padding-left: 50px;
-  }
- 
-.inputLineC input{
-    display: block;
-    border-style: none;
-    outline: 0;
-    border-width: 0 0 2px;
-    border-bottom: 1px solid #000000;
-    background-color: #2F2E41;
-    margin-top: 0px;
-    width: 300px;
 }
-.Btn{
-    padding-left: 200px;
-    padding-right: 0;
-    
+.ContactForm {
+  background-color: #2f2e41;
+  width: 395px;
+  height: 500px;
+  float: right;
+  color: #cccccc;
+  margin-right: 85px;
+  border-radius: 30px;
+  margin-left: 0;
+  padding-top: 50px;
+  box-shadow: 0 8px 6px -6px black;
 }
-.Btn input{
-    background-color: #FFC300;
-    width: 100px;
-    border-radius: 10px;
-    height: 40px;
-    font-family: 'Kiwi Maru', serif;
-    
+.ContactForm div {
+}
+.ContactForm h3 {
+  text-align: center;
+}
+.ContactImg {
+  float: left;
+  width: 601px;
+  height: 492px;
+  margin-left: 110px;
+}
+.Contact {
+  margin-top: 50px;
+}
+.ContactFormDiv {
+  padding-left: 0px !important;
+}
+.inputLineC {
+  display: flex;
+  padding-top: 20px;
+  padding-left: 50px;
+}
+
+.inputLineC input {
+  display: block;
+  border-style: none;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-bottom: 1px solid #000000;
+  background-color: #2f2e41;
+  margin-top: 0px;
+  width: 300px;
+}
+.Btn {
+  padding-left: 200px;
+  padding-right: 0;
+}
+.Btn input {
+  background-color: #ffc300;
+  width: 100px;
+  border-radius: 10px;
+  height: 40px;
+  font-family: "Kiwi Maru", serif;
+}
+.Details {
+  background-color: #2f2e41;
+  width: 85vw;
+  height: 80vh;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffd60a;
+  padding: 50px 0px 0px 50px;
+}
+.Details img {
+  float: left;
+  width: auto;
+  height: 400px;
+}
+.detailsFielddiv {
+  margin-left: 320px;
+  font-size: 24px;
+}
+.detailsField {
+  background-color: #c4c4c4;
+  color: black;
+  display: inline-block;
+  width: 300px;
+  text-align: center;
+  float: right;
+  margin-right: 400px;
+}
+.detailsFieldbtn {
+  margin-left: 320px;
+}
+
+.Detailsbtn {
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  height: 30px;
+  margin-top: 100px;
+}
+.btnadd {
+  background-color: #ffd60a;
+  color: #003566;
+  font-size: 20px;
+  margin-right: 50px;
+}
+.btnremove {
+  background-color: #003566;
+  color: #ffd60a;
+  font-size: 20px;
+}
+.done {
+  color: #ffd60a;
+  font-size: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 600px;
+}
+.done img {
+  width: 632px;
+  height: 431px;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+.buy-title {
+  color: #ffc300;
+  text-align: center;
+  padding-top: 50px;
+}
+.row {
+  width: 80vw;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.theBook {
+  width: 245px !important;
+  height: 325px;
+  margin: 20px;
+  padding-top: 30px;
+  margin-bottom: 50px;
+}
+.theBook span {
+  color: #ffc300;
+}
+.theBook a {
+  text-decoration: none;
+}
+.buy-text {
+  text-align: center;
+  padding-top: 10px;
+}
+.buy-image img {
+  width: 245px;
+  height: 325px;
+  border-radius: 20px;
 }

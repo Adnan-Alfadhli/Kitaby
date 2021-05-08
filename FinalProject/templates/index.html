@@ -1,18 +1,22 @@
-{% extends 'base.html' %}
-{% load static %}
-{% static "images" as baseUrl %}
-{% block title %}Home{% endblock %}
-
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% static "images" as baseUrl %} {%
+{% block title %}Home{% endblock %} {% block content %}
 
 <div class="HomeLeft">
-    <h1 class="Title">Find Your Book Easy</h1>
-    <p class="dis">With Kitaby platform you can search of any books that 
-        your instractour requiremant</p>
-    <form class="SearchForm">
-        <input type="text" placeholder="Find Your Book here" class="SearchInput"><input type="submit" value="Search Book" class="SearchBut">
-    </form>
+  <h1 class="Title">Find Your Book Easy</h1>
+  <p class="dis">
+    With Kitaby platform you can search of any books that your instractour
+    requiremant
+  </p>
+  <form class="SearchForm" action="SearchBook" method="GET">
+    <input
+      autocomplete="off"
+      type="text"
+      placeholder="Find Your Book here"
+      name="SearchBook"
+      class="SearchInput"
+    /><input type="submit" value="Search Book" class="SearchBut" />
+  </form>
 </div>
-<img src="{% static 'images/Undraw/HomeBook.svg'%}" class="HomeImg">
+<img src="{% static 'images/Undraw/HomeBook.svg'%}" class="HomeImg" />
 
 {% endblock %}

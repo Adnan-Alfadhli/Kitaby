@@ -124,7 +124,6 @@ class User(AbstractBaseUser):
     def is_admin(self):
         return self.admin
     
-
 Category_Choices = (
     ('NEW','New'),
     ('RENT','Rent'),
@@ -139,6 +138,8 @@ class Book(models.Model):
     Publisher=models.CharField(max_length=60)
     CategoryType = models.CharField(choices=Category_Choices, max_length=4)
     slug = models.SlugField()
+    Book_Image = models.ImageField(null=True , blank=True)
+    #category
     def __str__(self):
         return self.Title
 
@@ -168,7 +169,6 @@ class UsedBook(models.Model):
     def __str__(self):
         return self.Book_Title
 
-
     
 class Category(models.Model):
     CategoryID=models.IntegerField(primary_key=True, unique=True )
@@ -192,6 +192,7 @@ class Order(models.Model):
     ordered = models.BooleanField(default=False)
     def __str__(self):
         return self.user.email
+
 
 
 #Employee

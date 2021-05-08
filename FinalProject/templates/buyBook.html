@@ -1,12 +1,20 @@
-{% extends 'base.html' %}
-{% load static %}
-{% static "images" as baseUrl %}
-{% block title %}Buy Book{% endblock %}
-{% block content %}
-<h1>Buy book</h1>
-{% for book in object_list%}
-    <a href="{{ book.get_absolute_url }}">{{book}}</a>
-    
-{% endfor %}
+{% extends 'base.html' %} {% load static %} {% static "images" as baseUrl %} {%
+{% block title %} Buy Book {% endblock %} {% block content %}
+<h1 class="buy-title">BUY YOUR BOOK NOW !</h1>
+
+<div class="row">
+  {% for book in object_list%} {% if book.CategoryType == 'NEW'%}
+  <div class="theBook">
+    <a href="{{ book.get_absolute_url }}">
+      <div class="buy-image">
+        <img src="{{book.Book_Image.url}}" />
+      </div>
+      <div class="buy-text">
+        <span>{{book.Title}}</span>
+      </div>
+    </a>
+  </div>
+  {% endif %} {% endfor %}
+</div>
 
 {% endblock %}

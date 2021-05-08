@@ -13,9 +13,18 @@
     {% endfor %}
 
 {% endif %}
-<h1>{{ object.Price}}</h1>
-
-<a href="{{ book.get_add_to_cart_url }}">Order book</a>
-<a href="{{ book.get_remove_from_cart_url }}">Delete book</a>
-
+<div class="Details">
+  <img src="{{object.Book_Image.url}}">
+  <div class="detailsFielddiv">
+    <p> Book Name : <span class="detailsField">{{ object.Title}}</span></p>
+    <p> ISBN : <span class="detailsField">{{ object.ISBN}}</span></p>
+    <p> Language : <span class="detailsField">{{ object.Language}}</span></p>
+    <p> Publisher : <span class="detailsField">{{ object.Publisher}}</span></p>
+    <p> Book Price : <span class="detailsField">{{ object.Price}} KWD</span></p>
+  </div>
+  <div class="detailsFieldbtn">
+  <a href="{{ book.get_add_to_cart_url }}" class="Detailsbtn btnadd">Add to cart</a>
+  <a href="{{ book.get_remove_from_cart_url }}" class="Detailsbtn btnremove">Remove from cart</a>
+  </div>
+</div>
 {% endblock %}
