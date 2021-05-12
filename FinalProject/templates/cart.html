@@ -1,37 +1,49 @@
 {% extends 'base.html' %} {% load static %} {% static "images" as baseUrl %} {%
-{% block title %} Buy Book {% endblock %} {% block content %}
+{% block title %} Your Bag {% endblock %} {% block content %}
+<div class="Cart-Div">
+  <div class="table-div">
+    <h2>Your Bag</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Book Title</th>
+          <th scope="col">Price</th>
+          <th scope="col">Method Type</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Total Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for OrderBook in object.books.all %}
+        <tr>
+          <th scope="row">{{ forloop.counter }}</th>
+          <td>{{ OrderBook.book.Title }}</td>
+          <td>{{ OrderBook.book.Price }}</td>
+          <td>{{ OrderBook.book.CategoryType }}</td>
+          <td>{{ OrderBook.quantity }}</td>
+          <td>{{OrderBook.get_total_book_price}} KWD</td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="5">Your cart is empty</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Book Title</th>
-      <th scope="col">Price</th>
-      <th scope="col">Method Type</th>
-      <th scope="col">Quantity</th>
-      <th scope="col">Total Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for OrderBook in object.books.all %}
-    <tr>
-      <th scope="row">{{ forloop.counter }}</th>
-      <td>{{ OrderBook.book.Title }}</td>
-      <td>{{ OrderBook.book.Price }}</td>
-      <td>{{ OrderBook.book.CategoryType }}</td>
-      <td>{{ OrderBook.quantity }}</td>
-      <td>{{OrderBook.get_total_book_price}} KWD</td>
-    </tr>
-    {% empty %}
-    <tr>
-      <td colspan="5">Your cart is empty</td>
-    </tr>
-    {% endfor %}
-    <tr>
-      <td colspan="5">Order Total :</td>
-      <td>{{object.get_total }} KWD</td>
-    </tr>
-  </tbody>
+  <div class="Shipping">
+    <p class="line">Shipping Information</p>
+    <p>Address</p>
+    <p class="line">{{ user.Address }}</p>
+    <p class="line">
+      Order Total : <span class="Total-price">{{object.get_total }} KWD</span>
+    </p>
+    <div class="Check-btn">
+      <a href="../bill">Checkout</a>
+    </div>
+  </div>
+</div>
 
-  {% endblock %}
-</table>
+{% endblock %}

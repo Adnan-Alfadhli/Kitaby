@@ -442,3 +442,65 @@ nav {
   height: 325px;
   border-radius: 20px;
 }
+.cart {
+  width: 140px;
+}
+.Cart-Div {
+  background-color: #2f2e41;
+  width: 85vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  height: 80vh;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+.table {
+}
+.table-div {
+  padding-top: 50px;
+  padding-left: 50px;
+  margin-right: 0;
+}
+.Cart-Div h2 {
+  color: #dddddd;
+}
+.table tr {
+  color: #dddddd;
+}
+.Shipping {
+  color: #dddddd;
+  margin-top: 100px;
+  margin-left: 100px;
+  font-size: 24px;
+}
+.Shipping p {
+  width: 320px;
+}
+.line {
+  border-bottom: #dddddd solid 1px;
+  padding-bottom: 15px;
+}
+.Check-btn {
+  background-color: #ffd60a;
+  width: 280px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  margin-left: 20px;
+  margin-top: 30px;
+}
+.Check-btn a {
+  color: #003566;
+  text-decoration: none;
+}
+.Check-btn a:hover {
+  color: #003566;
+  text-decoration: none;
+}
+.Total-price {
+  float: right;
+}

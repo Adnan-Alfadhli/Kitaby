@@ -210,3 +210,8 @@ def SearchBook(request):
         return render(request, 'SearchBook.html', {'book': book})
 
 
+def load(request):
+    return render(request, 'loading.html')
+
+def bill(request):
+    return render(request, 'bill.html')
