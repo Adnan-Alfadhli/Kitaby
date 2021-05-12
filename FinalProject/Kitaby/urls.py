@@ -18,5 +18,7 @@ urlpatterns = [
     path('Details/<slug>/', views.BookDetails.as_view(), name="Details"),
     path('add-to-cart/<slug>/', views.add_in_cart, name="add-to-cart"),
     path('remove-from-cart/<slug>/', views.remove_from_cart, name="remove-from-cart"),
-    path('SearchBook/', views.SearchBook, name="SearchBook")
+    path('SearchBook/', views.SearchBook, name="SearchBook"),
+    path('OrderSummaryView/', views.OrderSummaryView.as_view(), name="OrderSummaryView"),
+    
 ]

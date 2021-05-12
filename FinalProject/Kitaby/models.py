@@ -184,6 +184,13 @@ class OrderBook(models.Model):
     def __str__(self):
         return f"{self.quantity} of {self.book.Title}"
 
+
+    def get_total_book_price(self):
+        return self.quantity * self.book.Price
+
+    def get_final_price(self):
+        return self.get_total_book_price()
+
 class Order(models.Model):
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete = models.CASCADE)
@@ -193,7 +200,11 @@ class Order(models.Model):
     def __str__(self):
         return self.user.email
 
-
+    def get_total(self):
+        total = 0
+        for order_book in self.books.all():
+            total += order_book.get_final_price()
+        return total
 
 #Employee
 #class Bag(models.Model):

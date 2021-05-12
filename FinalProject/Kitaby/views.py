@@ -1,12 +1,15 @@
 from django.shortcuts import render,redirect, get_object_or_404
+from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth import authenticate
 from django.contrib.auth import get_user_model
 from django.contrib import messages
 from django.contrib.auth.models import auth
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import login as auth_login
 from .models import Book, UsedBook, OrderBook, Order
 from django.contrib.auth import password_validation
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, View
 from django.utils import timezone
 from .forms import addUsedBookForm
 from django.core.files.storage import FileSystemStorage
@@ -72,6 +75,21 @@ class BookDetails(DetailView):
     model = Book
     template_name = "BookDetails.html"
 
+
+class OrderSummaryView(LoginRequiredMixin, View):
+    def get(self, *args, **kwargs):
+        try:
+            order = Order.objects.get(user=self.request.user, ordered=False)
+            context = {
+                'object': order
+            }
+            return render(self.request, 'cart.html', context)
+        except ObjectDoesNotExist:
+            return redirect("/")
+        
+
+
+
 def Contact(request):
     if request.method == "POST":
         Msg_name = request.POST['Msg-name']
@@ -126,13 +144,15 @@ def logout(request):
     auth.logout(request)
     return redirect('/')
 
+
+@login_required
 def add_in_cart(request,slug):
     book = get_object_or_404(Book, slug=slug)
     order_book, created = OrderBook.objects.get_or_create(
         book=book,
         user = request.user,
         ordered=False
-        
+            
         )
     order_qs = Order.objects.filter(user=request.user, ordered=False)
     if order_qs.exists():
@@ -153,7 +173,8 @@ def add_in_cart(request,slug):
         messages.info(request, "The book was orderd sucssefuly")
 
         return redirect("Kitaby:Details", slug=slug)
-
+    return redirect("Kitaby:Details", slug=slug)
+@login_required
 def remove_from_cart(request, slug):
     book = get_object_or_404(Book, slug=slug)
     order_qs = Order.objects.filter(
@@ -179,8 +200,13 @@ def remove_from_cart(request, slug):
         return redirect("Kitaby:Details", slug=slug)
     return redirect("Kitaby:Details", slug=slug)
 
+
+
+
 def SearchBook(request):
     if request.method == "GET":
         SearchBook= request.GET.get('SearchBook')
         book = Book.objects.all().filter(Title=SearchBook)
         return render(request, 'SearchBook.html', {'book': book})
+
+
