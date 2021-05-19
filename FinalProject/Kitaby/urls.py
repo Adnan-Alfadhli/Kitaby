@@ -21,6 +21,7 @@ urlpatterns = [
     path('SearchBook/', views.SearchBook, name="SearchBook"),
     path('OrderSummaryView/', views.OrderSummaryView.as_view(), name="OrderSummaryView"),
     path('load', views.load, name="load"),
-    path('bill/', views.bill, name="bill")
+    path('bill/', views.bill, name="bill"),
+    path('done/', views.done, name="done")
     
 ]

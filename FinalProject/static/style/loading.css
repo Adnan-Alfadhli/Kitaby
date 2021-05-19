@@ -26,33 +26,33 @@
 #logo path:nth-child(2) {
   stroke-dasharray: 615px;
   stroke-dashoffset: 615px;
-  animation: line-anim 2s ease forwards;
+  animation: line-anim 2s ease-in-out infinite forwards;
 }
 
 #logo path:nth-child(3) {
   stroke-dasharray: 237px;
   stroke-dashoffset: 237px;
-  animation: line-anim 2s ease forwards 0.3s;
+  animation: line-anim 2s ease-in-out infinite forwards;
 }
 #logo path:nth-child(4) {
   stroke-dasharray: 415px;
   stroke-dashoffset: 415px;
-  animation: line-anim 2s ease forwards 0.6s;
+  animation: line-anim 2s ease-in-out infinite forwards;
 }
 #logo path:nth-child(5) {
   stroke-dasharray: 550px;
   stroke-dashoffset: 550px;
-  animation: line-anim 2s ease forwards 0.9s;
+  animation: line-anim 2s ease-in-out infinite forwards;
 }
 #logo path:nth-child(6) {
   stroke-dasharray: 590px;
   stroke-dashoffset: 590px;
-  animation: line-anim 2s ease forwards 1.2s;
+  animation: line-anim 2s ease-in-out infinite forwards;
 }
 #logo path:nth-child(7) {
   stroke-dasharray: 412px;
   stroke-dashoffset: 412px;
-  animation: line-anim 2s ease forwards 1.5s;
+  animation: line-anim 2s ease-in-out infinite forwards;
 }
 
 @keyframes line-anim {

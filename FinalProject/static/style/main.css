@@ -354,7 +354,7 @@ nav {
 }
 .Details img {
   float: left;
-  width: auto;
+  width: 300px;
   height: 400px;
 }
 .detailsFielddiv {
@@ -425,7 +425,7 @@ nav {
   height: 325px;
   margin: 20px;
   padding-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 .theBook span {
   color: #ffc300;
@@ -503,4 +503,8 @@ nav {
 }
 .Total-price {
   float: right;
+}
+.done {
+  margin-top: 100px;
+  text-align: center;
 }

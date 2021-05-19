@@ -215,3 +215,6 @@ def load(request):
 
 def bill(request):
     return render(request, 'bill.html')
+
+def done(request):
+    return render(request, 'done.html')
