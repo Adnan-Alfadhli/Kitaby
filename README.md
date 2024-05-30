@@ -1,1 +1,3 @@
 # Kitaby
+
+#pip install django
