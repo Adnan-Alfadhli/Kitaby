@@ -4,9 +4,9 @@
 > You need to install Python 3 first .
 
 
-# Create a new database using PostgreSQL called Kitaby
+# 1. Create a new database using PostgreSQL called Kitaby
 
-# Install the project requirements:
+# 2. Install the project requirements:
 
 > pip3 install -r requirements.txt
 
@@ -14,7 +14,7 @@
 
 > pip install -r requirements.txt
 
-# To start the server, run the following command:
+# 3. To start the server, run the following command:
 
 > python3 manage.py runserver
 
