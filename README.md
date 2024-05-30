@@ -22,4 +22,4 @@
 
 > python manage.py runserver
 
-# Copy Local url that shows inside Terminal
+# 4. Copy Local url that shows inside Terminal
