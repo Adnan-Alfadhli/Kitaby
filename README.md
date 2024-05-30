@@ -23,3 +23,18 @@
 > python manage.py runserver
 
 # 4. Copy Local url that shows inside Terminal
+
+> [!WARNING]
+> To add new or rent book you need to be an admin 
+
+# To create Admin user, run the following command:
+
+> python3 manage.py createsuperuser
+
+### or
+
+> python manage.py createsuperuser
+
+> [!TIP]
+> To access the admin panel use the url in the terminal/admin
+> For Example: http://1.1.1.1:8000/admin
